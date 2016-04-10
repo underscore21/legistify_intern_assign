@@ -1,5 +1,6 @@
 <?php
        
+// this file returns count of new notifications for user
 	session_start();
 	include_once 'dbconnect.php';
  	

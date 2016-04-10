@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+// mark notification as read
 include_once 'dbconnect.php';
 
 $l = $_POST["name"];

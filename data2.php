@@ -1,5 +1,6 @@
 <?php
 
+// this file returns list of all apointments of this user
 session_start();
 include_once 'dbconnect.php';
 

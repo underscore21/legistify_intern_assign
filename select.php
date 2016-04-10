@@ -1,5 +1,7 @@
 <?php
        
+//notifcations for a user
+
 	session_start();
 	include_once 'dbconnect.php';
  	

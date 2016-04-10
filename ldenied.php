@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+// if lawyer rejectss the appointment request
+
 include_once 'dbconnect.php';
 
 $l = $_POST["name"];

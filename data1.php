@@ -1,5 +1,5 @@
 <?php
-
+// this file returns list of all available lawyers
 session_start();
 include_once 'dbconnect.php';
 

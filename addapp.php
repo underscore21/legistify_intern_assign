@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// this file books appointment 
 include_once 'dbconnect.php';
 
 $l = $_REQUEST["l"];

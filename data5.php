@@ -1,5 +1,6 @@
 <?php
 
+// this file returns list of all appointment requests of this lawyer
 session_start();
 include_once 'dbconnect.php';
 $res=mysql_query("SELECT * FROM lawyers WHERE user_id=".$_SESSION['user']);

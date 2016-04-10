@@ -1,12 +1,17 @@
 <?php
 session_start();
 include_once 'dbconnect.php';
-
+// if user is already logined
 if(isset($_SESSION['user'])!="")
-{
+{	
+	if($_SESSION['type']=='user')
 	header("Location: home_user.php");
+	if($_SESSION['type']=='lawyer')
+	header("Location: home_lawyer.php");
+		
 }
 
+//if user presses login button 
 if(isset($_POST['btn-login']))
 {
 	$email = mysql_real_escape_string($_POST['email']);
@@ -24,15 +29,18 @@ if(isset($_POST['btn-login']))
 	$row=mysql_fetch_array($res);
 	
 	$count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
-	$_SESSION['user'] = $row['user_id'];	
+	$_SESSION['user'] = $row['user_id'];
+        	
 	echo $row['user_id'];
 	if($count == 1 && $row['user_pass']==md5($upass))
 	{
 			
-	if($uprof=='user')
+	if($uprof=='user'){
 		header("Location: home_user.php");
+	$_SESSION['type'] = 'user';}
 	else
-	    header("Location: home_lawyer.php");
+	    {header("Location: home_lawyer.php");
+             $_SESSION['type'] = 'lawyer';}
 	
 	}
 	else

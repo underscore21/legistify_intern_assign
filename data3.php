@@ -1,5 +1,6 @@
 <?php
 
+// this file returns list of all notifications of this user and option to mark as read
 session_start();
 include_once 'dbconnect.php';
 

@@ -1,4 +1,6 @@
 <?php
+
+// this file returns list of all appointments accepted or denied of current lawyer
 session_start();
 include_once 'dbconnect.php';
 
